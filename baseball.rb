@@ -1,3 +1,4 @@
+require 'pry'
 class Baseball
 
 	def input_read_parse(batting, master_small)
