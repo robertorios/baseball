@@ -1,4 +1,3 @@
-require File.join(File.dirname(__FILE__), 'assets')
 require File.join(File.dirname(__FILE__), 'improve_batting_09_10')
 require File.join(File.dirname(__FILE__), 'slugging_percentage_oaks_07')
 require File.join(File.dirname(__FILE__), 'triple_crown_winner_11_12')

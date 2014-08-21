@@ -9,7 +9,8 @@ class Triple_crown_winner_11_12
 		calculations(players, mas)
 	end
 
-	 def calculations(players, mas)
+	private
+	def calculations(players, mas)
 	    data_set =[["2011", "NL"], ["2012", "NL"], ["2011", "AL"], ["2012", "AL"]].map{|q| get_data(q, players)}
 	    pla_keys = players.keys;nil
 	    pla_keys.map{|q| players[q]["H"]=[players[q]["H"].to_i]}

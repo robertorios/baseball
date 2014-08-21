@@ -5,6 +5,6 @@ module Formulas
 	end
 
 	def self.formula_slugging(players, player, info=players[player])
-		info["AB"] == 0 || info["AB"] == nil ? 0.to_f : ((info["H"].to_f - info["2B"].to_f - info["3B"].to_f - info["HR"].to_f)+(2*info["2B"].to_f)+(3*info["3B"].to_f)+(4*info["HR"].to_f))/info["AB"].to_f
+		info["AB"].to_i == 0 || info["AB"] == nil ? 0.to_f : ((info["H"].to_f - info["2B"].to_f - info["3B"].to_f - info["HR"].to_f)+(2*info["2B"].to_f)+(3*info["3B"].to_f)+(4*info["HR"].to_f))/info["AB"].to_f
 	end	
 end

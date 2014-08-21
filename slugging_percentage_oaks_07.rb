@@ -1,4 +1,3 @@
-require 'pry'
 require File.join(File.dirname(__FILE__), 'assets')
 require File.join(File.dirname(__FILE__), 'formulas')
 
@@ -9,6 +8,7 @@ class Slugging_percentage_oaks_07
 		calculations(players, mas)
 	end
 
+	private
 	def calculations(players, mas)
 		result = players.keys.select{|player|player.split("_")[1] == "2007" && player.split("_")[3] == "OAK"}
 		result.map!{|q| [q, Formulas.formula_slugging(players, q)] }

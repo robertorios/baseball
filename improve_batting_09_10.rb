@@ -1,4 +1,3 @@
-require 'pry'
 require File.join(File.dirname(__FILE__), 'assets')
 require File.join(File.dirname(__FILE__), 'formulas')
 
@@ -8,6 +7,7 @@ class Improve_batting_09_10
 		calculations(players, mas)
 	end
 
+	private
 	def calculations(players, mas, results=[], nine=[], ten =[] )
 		relevant_data = players.keys.select{|player| player.split("_")[1] == "2009" || player.split("_")[1] == "2010" }.group_by{|q| q.split("_")[0]}.map{|w| w}.reject{|r| r[1].size < 2}
 		relevant_data.map{|q| ten << q[1].select{|w| w =~ /2010/}; nine << q[1].select{|w| w =~ /2009/}}
